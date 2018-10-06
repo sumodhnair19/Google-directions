@@ -1,0 +1,14 @@
+
+
+.map-container {
+    width: 65%;
+    padding: 16px;
+    height: 500px;
+    float: right;
+
+}
+
+.map-container > div {
+    width: 100%;
+    height: 100%;
+}
