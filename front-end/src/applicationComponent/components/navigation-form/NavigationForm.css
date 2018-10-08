@@ -1,38 +1,51 @@
-
-
 .form-input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    text-align: center;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-.btn-container > .form-input {
-   float: left;
-   width: 45%;
-   margin: 15px 5px;
+.btn-container>.form-input {
+  float: left;
+  width: 45%;
+  margin: 15px 5px;
 }
-
 
 .form-container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    float: left;
-    text-align: left;
-    width: 20.6em;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  float: left;
+  text-align: left;
+  width: 20.6em;
 }
+
+.parent {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  border: 1px solid black;
+  padding: 1px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1023px) {
   .form-container {
     width: 35%;
   }
 }
+
 @media only screen and (max-width: 767px) {
   .form-container {
-      width: 95%;
+    width: 95%;
   }
 }

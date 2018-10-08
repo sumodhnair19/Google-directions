@@ -16,6 +16,14 @@ class NavigationForm extends Component {
     toInputAutoComplete;   //google autocomplete ending pt will render ref in this
     toInput;  //ending pt input
 
+    constructor() {
+      super();
+
+      this.state = {
+        fromInput: this.fromInput,
+        toInput : this.toInput
+      }
+    }
     /**
      * @name getRoute
      * @description call the parent 'getDirections' method and supply current Starting and drop-off points
@@ -24,7 +32,7 @@ class NavigationForm extends Component {
     getRoute = () => {
         let from = this.fromInputAutoComplete.getPlace(),
             to = this.toInputAutoComplete.getPlace();
-        if(!from || !to)
+        if(!from || !to || !this.fromInput.value || !this.toInput.value)
             return;
 
           this.props.getDirections(from, to);
@@ -45,7 +53,12 @@ class NavigationForm extends Component {
        * @description resets the inputs to default
        */
     resetRoute = () =>  {
-      window.location.reload();
+      this.fromInput.value = "";
+      this.toInput.value= "";
+      this.setState({
+        fromInput: this.fromInput,
+        toInput : this.toInput
+      })
     }
 
 
@@ -53,16 +66,32 @@ class NavigationForm extends Component {
         this.renderData();
     }
 
+    resetInput = (val) => {
+      if(val) {
+        if(val==='from')
+           this.fromInput.value = "";
+       else
+           this.toInput.value = "";
+        this.setState({
+          fromInput: this.fromInput,
+          toInput : this.toInput
+        })
+      }
+
+
+    }
     render() {
         return (
             <div className="form-container">
-                <div>
+                <div className="parent">
                     <label>Starting Location</label>
                     <input type="text" className="form-input" ref={el => (this.fromInput = el)} />
+                      <span className="close" onClick={this.resetInput.bind(this,'from')}>X</span>
                 </div>
-                <div>
+                <div className="parent">
                     <label>Drop-off point</label>
                     <input type="text"  className="form-input" ref={el => (this.toInput = el)}/>
+                    <span className="close" onClick={this.resetInput.bind(this,'to')}>X</span>
                 </div>
                 <div className="btn-container">
                     <button className="form-input" onClick={this.getRoute.bind(this)}>Submit</button>
