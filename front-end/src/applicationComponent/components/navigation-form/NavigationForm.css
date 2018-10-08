@@ -1,3 +1,5 @@
+
+
 .form-input {
     width: 100%;
     padding: 12px 20px;
@@ -23,4 +25,14 @@
     float: left;
     text-align: left;
     width: 20.6em;
+}
+@media only screen and (max-width: 1023px) {
+  .form-container {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .form-container {
+      width: 95%;
+  }
 }
