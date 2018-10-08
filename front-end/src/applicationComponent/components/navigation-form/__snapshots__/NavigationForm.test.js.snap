@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation Form Test render correctly 1`] = `
+<div
+  className="form-container"
+>
+  <div>
+    <label>
+      Starting Location
+    </label>
+    <input
+      className="form-input"
+      type="text"
+    />
+  </div>
+  <div>
+    <label>
+      Drop-off point
+    </label>
+    <input
+      className="form-input"
+      type="text"
+    />
+  </div>
+  <div
+    className="btn-container"
+  >
+    <button
+      className="form-input"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+    <button
+      className="form-input"
+      onClick={[Function]}
+    >
+      Reset
+    </button>
+  </div>
+</div>
+`;

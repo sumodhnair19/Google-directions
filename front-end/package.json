@@ -7,13 +7,18 @@
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.4",
     "axios": "^0.16.2",
-    "google-maps": "^3.3.0"
+    "google-maps": "^3.3.0",
+    "jest": "^23.6.0",
+    "babel-jest": "^23.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "react-test-renderer": "^16.4.1"
   },
   "eslintConfig": {
     "extends": "react-app"

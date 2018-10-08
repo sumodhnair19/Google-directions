@@ -1,4 +1,3 @@
-// import { restClient } from '../../../common/services/';
 import { API, axiosInstance } from '../../../sharedComponent/config';
 
 
@@ -28,4 +27,4 @@ const getDirectionService = async (from, to) => {
     return result;
 };
 
-export { getDirectionService };
+export { getDirectionService , getRoute, getToken };

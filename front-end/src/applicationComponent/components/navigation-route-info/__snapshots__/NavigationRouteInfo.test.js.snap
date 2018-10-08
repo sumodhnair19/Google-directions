@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation Route Info Test render correctly 1`] = `
+<div
+  className="route-info"
+>
+  <div
+    className="route-info-item"
+  >
+    <div
+      className="route-info-item-label"
+    >
+      Total distance
+      : 
+    </div>
+    <div
+      className="route-info-item-value"
+    >
+       
+    </div>
+  </div>
+  <div
+    className="route-info-item"
+  >
+    <div
+      className="route-info-item-label"
+    >
+      Total time
+      : 
+    </div>
+    <div
+      className="route-info-item-value"
+    >
+       
+    </div>
+  </div>
+</div>
+`;
