@@ -7,6 +7,12 @@ import { Loader } from '../sharedComponent/loader';
 
 import './Navigator.css';
 
+/**
+ * @type {Component}
+ * @name Directions
+ * @description Directions is the main component
+ */
+
 
 class Directions extends Component {
 
@@ -20,7 +26,12 @@ class Directions extends Component {
         };
     }
 
-
+    /**
+         * @description Fetch the directions
+         * This method call the Directions service to fetch the data
+         * @param from Starting Location
+         * @param to Drop-off point
+         */
 
     getDirections = async (from, to) => {
           this.showHideLoader(true);
@@ -44,6 +55,10 @@ class Directions extends Component {
             }));
         }
     };
+    /**
+       * @description Hide and show loader
+       * @param isVisible Boolean indicating that loader is shown or not
+       */
 
     showHideLoader = ( isVisible) => {
         this.setState({
@@ -51,7 +66,12 @@ class Directions extends Component {
         });
     };
 
-
+    /**
+       * @name showErrorMessage
+       * @description This method display the error message
+       * @param message Message to be displayed
+       */
+       
     showErrorMessage = message => {
         this.setState({
             mapData: null

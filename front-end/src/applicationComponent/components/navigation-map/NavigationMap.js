@@ -5,10 +5,21 @@ import { googleMaps } from '../../../sharedComponent/googleMap';
 import './NavigationMap.css';
 
 
+/**
+ * @name NavigationMap
+ * @type {Component}
+ * @extends Component React component
+ * @description This component display the map and routes
+ */
+
 class NavigationMap extends Component {
-    mapContainer;
-    map;
-    googleMaps;  //google ref
+    mapContainer;  // map container which saves the ref
+    map;  //map ref
+    googleMaps;  //google maps api ref
+    /**
+       * @name initMap
+       * @description Initialize the map
+       */
 
     initMap = async () => {
         this.googleMaps = await this.props.googleMaps();
@@ -19,10 +30,19 @@ class NavigationMap extends Component {
         });
     };
 
+    /**
+   * @description Prepare Map positions from path points
+   * @param path Array of points
+   */
+
     preparePositionsFromPath = path => {
         return path.map(([lat, lng]) => new this.googleMaps.LatLng(lat, lng));
     };
 
+    /**
+       * @description Plot the received points on map as route directions
+       * @param Object Response object returned from the Api containing the path points
+       */
 
     drawDirections = ({ path }) => {
         const directionsService = new this.googleMaps.DirectionsService();
